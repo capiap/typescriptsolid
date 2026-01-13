@@ -1,0 +1,24 @@
+{
+  // === Code Runner ===
+  "code-runner.executorMap": {
+    "typescript": "npx tsx ${file}"
+  },
+  "code-runner.runInTerminal": true,
+
+  // === Quebra de linha (resolve o erro ␍ do Prettier) ===
+  "files.eol": "\n", // Força LF ao salvar arquivos
+
+  // === Prettier + ESLint ===
+  "editor.formatOnSave": false,
+
+  // Executa ESLint ao salvar e deixe ele chamar o Prettier
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // Garante que o Prettier só rode se houver .prettierrc
+  "prettier.requireConfig": true,
+
+  // Validação do ESLint
+  "eslint.validate": ["javascript", "typescript"]
+}
